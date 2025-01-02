@@ -58,8 +58,7 @@ const SCORE_CHART = {
 
 export const drawLetters = () => {
   const letterList = [];
-  for (const letter in LETTER_POOL) {
-    const count = LETTER_POOL[letter];
+  for (const [letter, count] of Object.entries(LETTER_POOL)) {
     for (let i = 0; i < count; i++) {
       letterList.push(letter);
     }
